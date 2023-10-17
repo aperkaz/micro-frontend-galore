@@ -1,3 +1,5 @@
+import { Button } from "./components/Button";
+
 function App() {
   return (
     <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
@@ -40,6 +42,10 @@ function App() {
           </p>
         </div>
         <br />
+        <Button
+          onClick={() => window.alert("hi there")}
+          label="I am a custom button!"
+        />
         <a
           href="/about"
           className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
