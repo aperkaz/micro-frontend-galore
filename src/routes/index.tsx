@@ -1,6 +1,6 @@
-import { Button } from "./components/Button";
+import { Button } from "../components/Button";
 
-function App() {
+function Index() {
   return (
     <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <img
@@ -35,7 +35,7 @@ function App() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Vite + React + Typescript + Tailwind + Storybook + React-router
+            modern-react-spa
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             A dead-simple starter project for SPAs.
@@ -57,4 +57,4 @@ function App() {
   );
 }
 
-export default App;
+export default Index;
