@@ -1,0 +1,20 @@
+{
+  "name": "lazy-loaded-monorepo",
+  "version": "1.0.0",
+  "description": "The following micro-frontend architecture is based on a Turbo monorepo, that in conjuction with React.lazy and Suspense, its used to compose a micro-frontend from a dynamic JS object (representing the UI and data).",
+  "main": "index.js",
+  "scripts": {
+    "build": "turbo run build"
+  },
+  "workspaces": [
+    "host",
+    "domain1",
+    "domain2",
+    "shared"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "turbo": "^1.10.15"
+  }
+}
