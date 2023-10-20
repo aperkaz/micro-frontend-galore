@@ -1,8 +1,9 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import WeatherWidget from "domain2/src/components/WeatherWidget";
 
-// const WeatherWidget = React.lazy(() => import("remote"));
+const WeatherWidget = React.lazy(
+  () => import("domain2/src/components/WeatherWidget")
+);
 
 function Weather() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Image from "domain1/src/components/Image";
-// const Image = React.lazy(() => import("domain1"));
+
+const Image = React.lazy(() => import("domain1/src/components/Image"));
 
 function About() {
   return (
