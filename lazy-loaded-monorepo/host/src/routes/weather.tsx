@@ -1,9 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import WeatherWidget from "domain2/src/components/WeatherWidget";
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-const WeatherWidget = React.lazy(() => import("remote2/WeatherWidget"));
+// const WeatherWidget = React.lazy(() => import("remote"));
 
 function Weather() {
   return (

@@ -1,5 +1,9 @@
 {
   "pipeline": {
+    "dev": {
+      "outputs": [],
+      "dependsOn": []
+    },
     "build": {
       "outputs": ["dist/**"],
       "dependsOn": ["^build"]

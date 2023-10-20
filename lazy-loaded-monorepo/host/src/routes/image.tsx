@@ -1,9 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-const Image = React.lazy(() => import("remote1/Image"));
+import Image from "domain1/src/components/Image";
+// const Image = React.lazy(() => import("domain1"));
 
 function About() {
   return (
