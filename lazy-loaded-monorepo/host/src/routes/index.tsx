@@ -1,25 +1,11 @@
 import React, { Suspense } from "react";
 import Navbar from "../components/Navbar";
+import { CONTRACT, ContractModules } from "shared/src";
 
-const CONTRACT = {
-  image: {
-    url: "domain1/src/components/Image.tsx",
-    component: React.lazy(() => import("domain1/src/components/Image.tsx")),
-    data: {
-      src: "https://www.thelabradorsite.com/wp-content/uploads/2015/07/black-lab-puppy.jpg",
-    },
-  },
-  weatherWidget: {
-    url: "domain2/src/components/WeatherWidget.tsx",
-    component: React.lazy(() => import("domain2/src/components/WeatherWidget")),
-    data: {},
-  },
-} as const;
-type Modules = keyof typeof CONTRACT;
-
-const Renderer = ({ module }: { module: Modules }) => {
-  // const LazyComponent = React.lazy(() => import(`${CONTRACT[module].url}`));
-  const LazyComponent = CONTRACT[module].component;
+const Renderer = ({ module }: { module: ContractModules }) => {
+  // const LazyComponent = React.lazy(() => import(`${CONTRACT[module].url}`)); DOEST NOT SUPPORT DYNAMIG LAZY IMPORT
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const LazyComponent: any = CONTRACT[module].component;
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -29,7 +15,7 @@ const Renderer = ({ module }: { module: Modules }) => {
 };
 
 function Index() {
-  const [module, setModule] = React.useState<Modules | null>(null);
+  const [module, setModule] = React.useState<ContractModules | null>(null);
 
   return (
     <>
