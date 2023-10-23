@@ -5,7 +5,7 @@ import { CONTRACT, ContractModules } from "shared/src";
 const Renderer = ({ module }: { module: ContractModules }) => {
   // const LazyComponent = React.lazy(() => import(`${CONTRACT[module].url}`)); DOEST NOT SUPPORT DYNAMIG LAZY IMPORT
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const LazyComponent: any = CONTRACT[module].component;
+  const LazyComponent: any = CONTRACT[module].component();
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
