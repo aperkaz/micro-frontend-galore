@@ -58,6 +58,7 @@ const App = () => {
         <ErrorBoundary fallback={<div>Something went wrong</div>}>
           <ProviderButton />
         </ErrorBoundary>
+
         <br />
         <button
           onClick={() => {

@@ -3,7 +3,6 @@ import { pluginReact } from "@rsbuild/plugin-react";
 import { pluginModuleFederation } from "@module-federation/rsbuild-plugin";
 
 export default defineConfig({
-  mode: "production",
   plugins: [
     pluginReact(),
     pluginModuleFederation({

@@ -3,16 +3,6 @@ import { pluginReact } from "@rsbuild/plugin-react";
 import { pluginModuleFederation } from "@module-federation/rsbuild-plugin";
 
 export default defineConfig({
-  // tools: {
-  //   rspack: {
-  //     plugins: [
-  //       new rspack.DefinePlugin({
-  //         // @ts-ignore
-  //         "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-  //       }),
-  //     ],
-  //   },
-  // },
   plugins: [
     pluginReact(),
     pluginModuleFederation({
