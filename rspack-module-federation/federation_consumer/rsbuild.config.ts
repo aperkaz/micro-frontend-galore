@@ -3,6 +3,7 @@ import { pluginReact } from "@rsbuild/plugin-react";
 import { pluginModuleFederation } from "@module-federation/rsbuild-plugin";
 
 export default defineConfig({
+  mode: "production",
   plugins: [
     pluginReact(),
     pluginModuleFederation({
@@ -11,7 +12,7 @@ export default defineConfig({
         federation_provider:
           "federation_provider@http://localhost:3000/mf-manifest.json",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-dom/client"],
     }),
   ],
   server: {
