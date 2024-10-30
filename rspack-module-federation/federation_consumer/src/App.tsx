@@ -1,7 +1,5 @@
-// import { ErrorBoundary } from "react-error-boundary";
 import React, { lazy } from "react";
 import "./App.css";
-// import ProviderButton from "federation_provider/button";
 const ProviderButton = lazy(() => import("federation_provider/button"));
 
 interface State {
