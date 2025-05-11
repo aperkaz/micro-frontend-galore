@@ -1,13 +1,15 @@
 # conflicting-dependencies-react
 
-`host` package imports the other packages.
+`host-react19` and `package-react18` have different versions of react.
 
-`packageA`: built together with `host`, depends on react `19.1.0`
-`packageB`: built together with `host`, depends on react `18.1.0`
-`packageC`: TS project built with Vite. The compiled package output includes the react version `18.1.0`
+`package-react18` externalizes the `react` dependency through Vite, since 2 versions of react cant be loaded simultaneously. The `package-react18` is demo component-library.
 
-When the code is built together with `host` (`packageA` and `packageB`), the NPM package resolution kicks in installing react `19.1.0`.
-This means that `packageB` could fail at runtime.
+_IMPORTANT_: `npm` only checks the `peerDependencies` requirements with installing a package from package repository.
 
-Since `packageC` is built with Vite before its imported as a package by `host`, its version of react is included in the bundle.
-This makes the final `host`'s bundle bigger since it has to import 2 versions of react.
+When installing the package locally through `npm i -s ../package-react18` (or other methods), conflicting peerDependencies DO NOT show up.
+
+Use the following command to check for incompatible peer dependencies:
+
+```bash
+ npx check-peer-dependencies --npm
+```

@@ -1,8 +1,19 @@
 {
-  "name": "conflicting-dependencies",
+  "name": "package-react18",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/package-react18.cjs",
+  "module": "./dist/package-react18.js",
+  "exports": {
+    ".": {
+      "import": "./dist/package-react18.js",
+      "require": "./dist/package-react18.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -10,17 +21,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "package-a": "file:../packageA",
-    "package-b": "file:../packageB",
-    "package-c": "file:../packageC",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "peerDependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
-    "@types/lodash": "^4.17.16",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
+    "@types/node": "^22.15.17",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.4.1",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",

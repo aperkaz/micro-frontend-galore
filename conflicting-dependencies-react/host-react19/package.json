@@ -1,5 +1,5 @@
 {
-  "name": "host-lodash4",
+  "name": "host-react19",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,9 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "package-lodash3": "file:../package-lodash3",
-    "package-lodash4": "file:../package-lodash4",
-    "package-prebuilt-lodash4": "file:../package-prebuilt-lodash4",
+    "package-react18": "file:../package-react18",
     "picomatch": "^4.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

@@ -11,3 +11,13 @@ This means that `package-lodash3` will fail at runtime.
 
 Since `package-prebuilt-lodash4` is built with Vite before its imported as a package by `host-lodash4`, its version of lodash is included in the bundle.
 This makes the final `host-lodash4`'s bundle bigger since it has to import 2 versions of lodash, but it prevents conflicts.
+
+_IMPORTANT_: `npm` only checks the `peerDependencies` requirements with installing a package from package repository.
+
+When installing the package locally through `npm i -s ../package-prebuilt-lodash4` (or other methods), conflicting peerDependencies DO NOT show up.
+
+Use the following command to check for incompatible peer dependencies:
+
+```bash
+ npx check-peer-dependencies --npm
+```
