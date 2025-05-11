@@ -5,12 +5,12 @@ import lodash from "lodash";
     { name: "Bob", age: 30, active: false },
     { name: "Charlie", age: 25, active: true },
   ];
-  console.log(`packageB - expects lodash 3.0.1 ->: ${lodash.VERSION}`);
+  console.log(`"package-lodash3" - expects lodash 3.0.1 ->: ${lodash.VERSION}`);
   // v3 specific API
   lodash.where(users, {
     age: 25,
     active: true,
   });
 
-  window.versionWinner = "packageB";
+  window.versionWinner = "package-lodash3";
 })();

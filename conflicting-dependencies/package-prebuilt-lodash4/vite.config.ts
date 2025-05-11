@@ -5,8 +5,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/main.ts",
-      name: "package-c",
-      fileName: "package-c",
+      name: "package-prebuilt-lodash4",
+      fileName: "package-prebuilt-lodash4",
       formats: ["es", "cjs"],
     },
   },

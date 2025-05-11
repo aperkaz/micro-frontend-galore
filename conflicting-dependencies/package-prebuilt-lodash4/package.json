@@ -1,16 +1,16 @@
 {
-  "name": "package-c",
+  "name": "package-prebuilt-lodash4",
   "private": true,
   "version": "0.0.0",
   "files": [
     "dist"
   ],
-  "main": "./dist/package-c.mjs",
-  "module": "./dist/package-c.js",
+  "main": "./dist/package-prebuilt-lodash4.mjs",
+  "module": "./dist/package-prebuilt-lodash4.js",
   "exports": {
     ".": {
-      "import": "./dist/package-c.mjs",
-      "require": "./dist/package-c.js"
+      "import": "./dist/package-prebuilt-lodash4.mjs",
+      "require": "./dist/package-prebuilt-lodash4.js"
     }
   },
   "scripts": {
